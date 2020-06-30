@@ -28,14 +28,14 @@ const styles = {
     display: "block",
     marginLeft: "auto",
     marginRight: "auto",
-    width: "350px",
+    width: "395px",
   },
 
   theSeats3: {
     display: "block",
     marginLeft: "auto",
     marginRight: "auto",
-    width: "393px",
+    width: "425px",
   },
 };
 function App() {
@@ -50,14 +50,14 @@ function App() {
       <div style={styles.list}>
         <div style={styles.Margin}>
           <img src={S1} alt=" The Seats1 " style={styles.theSeats2} />
-          <p> 8 - 12 person</p>
-          <p>100 KD</p>
+          <p style={styles.text}> 8 - 12 person</p>
+          <p style={styles.text}>100 KD</p>
         </div>
 
         <div style={styles.Margin}>
           <img src={S2} alt=" The Seats2 " style={styles.theSeats3} />
-          <p> 18 - 24 person</p>
-          <p>130 KD</p>
+          <p style={styles.text}> 18 - 24 person</p>
+          <p style={styles.text}>130 KD</p>
         </div>
       </div>
     </div>
