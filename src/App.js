@@ -13,6 +13,8 @@ const styles = {
     justifyContent: "center",
     display: "flex",
   },
+
+  Margin: { margin: "30px" },
   text: {
     textAlign: "center",
   },
@@ -20,62 +22,43 @@ const styles = {
     display: "block",
     marginLeft: "auto",
     marginRight: "auto",
-    width: "50%",
+    width: "500px",
   },
   theSeats2: {
     display: "block",
     marginLeft: "auto",
     marginRight: "auto",
-    width: "50%",
+    width: "350px",
   },
 
   theSeats3: {
     display: "block",
     marginLeft: "auto",
     marginRight: "auto",
-    width: "50%",
+    width: "393px",
   },
 };
 function App() {
   return (
     <div>
       <div>
-        <div style={styles.theseats}>
-          <h1 style={styles.text}>The Seats</h1>
-          <h3 style={styles.text}>We support all your occasions!</h3>
+        <h1 style={styles.text}>The Seats</h1>
+        <h3 style={styles.text}>We support all your occasions!</h3>
 
-          <img
-            src={S}
-            width="450"
-            height="450"
-            alt=" The Seats "
-            style={styles.theSeats}
-          />
-        </div>
-
-        <div style={styles.theseats}>
-          <img
-            src={S1}
-            width="300"
-            height="450"
-            alt=" The Seats1 "
-            style={styles.theSeats1}
-          />
+        <img src={S} alt=" The Seats " style={styles.theSeats1} />
+      </div>
+      <div style={styles.list}>
+        <div style={styles.Margin}>
+          <img src={S1} alt=" The Seats1 " style={styles.theSeats2} />
           <p> 8 - 12 person</p>
           <p>100 KD</p>
         </div>
-      </div>
 
-      <div style={styles.theseats}>
-        <img
-          src={S2}
-          width="300"
-          height="450"
-          alt=" The Seats2 "
-          style={styles.theSeats3}
-        />
-        <p> 18 - 24 person</p>
-        <p>130 KD</p>
+        <div style={styles.Margin}>
+          <img src={S2} alt=" The Seats2 " style={styles.theSeats3} />
+          <p> 18 - 24 person</p>
+          <p>130 KD</p>
+        </div>
       </div>
     </div>
   );
