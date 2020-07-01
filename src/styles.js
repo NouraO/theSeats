@@ -19,18 +19,11 @@ const styles = {
     marginRight: "auto",
     width: "500px",
   },
-  theSeats2: {
+  seatImage: {
     display: "block",
     marginLeft: "auto",
     marginRight: "auto",
     width: "395px",
-  },
-
-  theSeats3: {
-    display: "block",
-    marginLeft: "auto",
-    marginRight: "auto",
-    width: "425px",
   },
 };
 export default styles;
