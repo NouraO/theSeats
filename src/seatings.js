@@ -1,4 +1,3 @@
-import S from "./S.jpg";
 import S1 from "./S1.jpg";
 import S2 from "./S2.jpeg";
 import S3 from "./S3.jpeg";

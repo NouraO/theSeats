@@ -1,36 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import S from "./S.jpg";
-import S1 from "./S1.jpg";
-import S2 from "./S2.jpeg";
-import S3 from "./S3.jpeg";
 
-//Data
-import Outseatings from "./seatings";
+//Components
+import SeatsList from "./components/SeatsList";
 
 //styles
-import styles from "./styles";
+import { ThemeProvider } from "styled-components";
+import {
+  Description,
+  TheSeats1,
+  ThemeButton,
+  // DeleteButtonStyled,
+  Title,
+} from "./styles";
+import GloblStyle from "./styles";
 
+const theme = {
+  light: {
+    mainColor: "purple",
+    backgroundColor: "black",
+    pink: "#ff85a2",
+    red: "#ff3232",
+  },
+
+  dark: {
+    mainColor: "purple",
+    backgroundColor: "White",
+    pink: "#ff85a2",
+    red: "#ff3232",
+  },
+};
 function App() {
-  //console.log(Outseatings[0].name);
-  const theseatingList = Outseatings.map((seatings) => (
-    <div style={styles.Margin} key={seatings.id}>
-      <img src={seatings.Image} alt={seatings.name} style={styles.seatImage} />
-      <p style={styles.text}> {seatings.name}</p>
-      <p style={styles.text}>{seatings.price} KD</p>
-    </div>
-  ));
+  const [currentTheme, setCurrentTheme] = useState("light");
+  const handleToggle = () => {
+    setCurrentTheme(currentTheme === "light" ? "dark" : "light");
+  };
 
   return (
-    <div>
-      <div>
-        <h1 style={styles.text}>The Seats</h1>
-        <h3 style={styles.text}>We support all your occasions!</h3>
+    <ThemeProvider theme={theme[currentTheme]}>
+      <GloblStyle />
+      <ThemeButton onClick={handleToggle}>
+        {currentTheme === "light" ? "Dark" : "Light"} MODE
+      </ThemeButton>
 
-        <img src={S} alt=" The Seats1 " style={styles.theSeats1} />
+      <div>
+        <Title> The Seats </Title>
+        <Description> Gathering and more </Description>
+        <TheSeats1 src={S} alt=" The Seats " />
       </div>
 
-      <div style={styles.list}>{theseatingList}</div>
-    </div>
+      <SeatsList />
+    </ThemeProvider>
   );
 }
 
